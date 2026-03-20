@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties - James Williamson LLC</title>
+    <meta name="description" content="Discover your dream home with James Williamson LLC. Browse our premium property listings.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <!-- Page Progress Bar -->
+    <div id="page-progress-bar" class="page-progress-bar"></div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span><i class="fas fa-phone"></i> <a href="tel:+18102885412">(810) 288-5412</a></span>
+                <span><i class="fas fa-envelope"></i> <a href="mailto:info@jameswilliamsonrealtor.com">info@jameswilliamsonrealtor.com</a></span>
+            </div>
+            <div class="top-bar-right">
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"><h1>James Williamson LLC</h1></a>
+            </div>
+            
+            <nav class="nav" role="navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="properties.html" class="nav-link active">Properties</a></li>
+                    <li><a href="decor.html" class="nav-link">Decor Shop</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="team.html" class="nav-link">Team</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="action-btn search-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="action-btn wishlist-btn" aria-label="Wishlist">
+                    <i class="fas fa-heart"></i>
+                    <span class="badge" id="wishlist-count">0</span>
+                </button>
+                <button class="action-btn cart-btn" aria-label="Shopping cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="badge" id="cart-count">0</span>
+                </button>
+                <button class="action-btn account-btn" aria-label="Account">
+                    <i class="fas fa-user"></i>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+    <nav class="mobile-menu">
+        <div class="mobile-menu-header">
+            <h2>Menu</h2>
+            <button class="mobile-menu-close">&times;</button>
+        </div>
+        <ul class="mobile-menu-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="decor.html">Decor Shop</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="page-hero">
+            <div class="container">
+                <h1>Premium Properties</h1>
+                <p>Discover your dream home from our curated collection of premium properties</p>
+            </div>
+        </section>
+
+        <section class="properties-section">
+            <div class="container">
+                <!-- Property Filters -->
+                <div class="filters-section">
+                    <h2>Find Your Perfect Home</h2>
+                    <div class="filters-container">
+                        <div class="filter-group">
+                            <label>Property Type</label>
+                            <select id="property-type-filter">
+                                <option value="">All Types</option>
+                                <option value="house">House</option>
+                                <option value="condo">Condo</option>
+                                <option value="townhome">Townhome</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Price Range</label>
+                            <select id="price-filter">
+                                <option value="">Any Price</option>
+                                <option value="0-300000">Under $300k</option>
+                                <option value="300000-500000">$300k - $500k</option>
+                                <option value="500000-750000">$500k - $750k</option>
+                                <option value="750000-1000000">$750k - $1M</option>
+                                <option value="1000000+">$1M+</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Bedrooms</label>
+                            <select id="bedrooms-filter">
+                                <option value="">Any</option>
+                                <option value="1">1+</option>
+                                <option value="2">2+</option>
+                                <option value="3">3+</option>
+                                <option value="4">4+</option>
+                                <option value="5">5+</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Location</label>
+                            <select id="location-filter">
+                                <option value="">All Locations</option>
+                                <option value="downtown">Downtown</option>
+                                <option value="westside">Westside</option>
+                                <option value="suburbs">Suburbs</option>
+                                <option value="waterfront">Waterfront</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="text" id="property-search" placeholder="Search properties..." class="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+
+                <!-- Properties Grid -->
+                <div class="properties-grid" id="properties-grid">
+                    <!-- Properties will be loaded here -->
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination-container" id="pagination-container">
+                    <!-- Pagination will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Property Modal -->
+    <div id="property-modal" class="modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content large-modal">
+            <div class="modal-header">
+                <h2 class="modal-title">Property Details</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body" id="property-modal-content">
+                <!-- Property details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Schedule Tour Modal -->
+    <div id="schedule-modal" class="modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Schedule a Tour</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="schedule-form">
+                    <div class="form-group">
+                        <label for="tour-name">Full Name *</label>
+                        <input type="text" id="tour-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tour-email">Email *</label>
+                        <input type="email" id="tour-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tour-phone">Phone *</label>
+                        <input type="tel" id="tour-phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tour-date">Preferred Date *</label>
+                        <input type="date" id="tour-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tour-time">Preferred Time *</label>
+                        <select id="tour-time" required>
+                            <option value="">Select a time</option>
+                            <option value="9:00 AM">9:00 AM</option>
+                            <option value="10:00 AM">10:00 AM</option>
+                            <option value="11:00 AM">11:00 AM</option>
+                            <option value="12:00 PM">12:00 PM</option>
+                            <option value="1:00 PM">1:00 PM</option>
+                            <option value="2:00 PM">2:00 PM</option>
+                            <option value="3:00 PM">3:00 PM</option>
+                            <option value="4:00 PM">4:00 PM</option>
+                            <option value="5:00 PM">5:00 PM</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="tour-message">Message</label>
+                        <textarea id="tour-message" rows="3" placeholder="Any special requests or questions?"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Schedule Tour</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>James Williamson LLC</h3>
+                    <p>Your trusted partner in finding the perfect home and creating beautiful interiors.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="decor.html">Decor Shop</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Buying</a></li>
+                        <li><a href="services.html">Selling</a></li>
+                        <li><a href="services.html">Interior Design</a></li>
+                        <li><a href="services.html">Home Staging</a></li>
+                        <li><a href="services.html">Property Management</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@jameswilliamsonrealtor.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 3122 Nw 27th St, Gainesville, FL 32605</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-legal">
+                <p>&copy; 2026 James Williamson LLC. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/components.js"></script>
+    <script>
+        // Properties page specific functionality
+        let currentProperties = [];
+        let currentPage = 1;
+        const itemsPerPage = 12;
+
+        // Load properties when page loads
+        document.addEventListener('DOMContentLoaded', async function() {
+            await loadProperties();
+            setupFilters();
+            setupSearch();
+            setupMobileMenu();
+            updateCartAndWishlistCounts();
+        });
+
+        async function loadProperties() {
+            try {
+                const api = new FakeAPI();
+                const data = await api.getProperties();
+                currentProperties = data.properties;
+                renderProperties(currentProperties);
+                renderPagination(currentProperties.length);
+            } catch (error) {
+                console.error('Error loading properties:', error);
+                showToast('Error loading properties. Please try again.', 'error');
+            }
+        }
+
+        function renderProperties(properties) {
+            const container = document.getElementById('properties-grid');
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const pageProperties = properties.slice(startIndex, endIndex);
+
+            container.innerHTML = pageProperties.map(property => createPropertyCard(property)).join('');
+            
+            // Add event listeners to property cards
+            pageProperties.forEach(property => {
+                const card = document.querySelector(`[data-property-id="${property.id}"]`);
+                if (card) {
+                    card.addEventListener('click', () => openPropertyModal(property));
+                    
+                    const wishlistBtn = card.querySelector('.wishlist-btn');
+                    if (wishlistBtn) {
+                        wishlistBtn.addEventListener('click', (e) => {
+                            e.stopPropagation();
+                            toggleWishlist(property);
+                        });
+                    }
+                    
+                    const scheduleBtn = card.querySelector('.schedule-tour-btn');
+                    if (scheduleBtn) {
+                        scheduleBtn.addEventListener('click', (e) => {
+                            e.stopPropagation();
+                            openScheduleModal(property);
+                        });
+                    }
+                }
+            });
+        }
+
+        function renderPagination(totalItems) {
+            const container = document.getElementById('pagination-container');
+            const totalPages = Math.ceil(totalItems / itemsPerPage);
+            
+            if (totalPages <= 1) {
+                container.innerHTML = '';
+                return;
+            }
+            
+            container.innerHTML = createPagination(currentPage, totalPages);
+            
+            // Add pagination event listeners
+            container.querySelectorAll('.pagination-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const page = parseInt(btn.dataset.page);
+                    if (page && page !== currentPage) {
+                        currentPage = page;
+                        renderProperties(currentProperties);
+                        renderPagination(totalItems);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                });
+            });
+        }
+
+        function setupFilters() {
+            const filters = ['property-type-filter', 'price-filter', 'bedrooms-filter', 'location-filter'];
+            
+            filters.forEach(filterId => {
+                const filter = document.getElementById(filterId);
+                if (filter) {
+                    filter.addEventListener('change', applyFilters);
+                }
+            });
+        }
+
+        function setupSearch() {
+            const searchInput = document.getElementById('property-search');
+            if (searchInput) {
+                let timeout;
+                searchInput.addEventListener('input', (e) => {
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => {
+                        applyFilters();
+                    }, 300);
+                });
+            }
+        }
+
+        function applyFilters() {
+            let filtered = [...properties];
+            const searchTerm = document.getElementById('property-search')?.value.toLowerCase() || '';
+            const typeFilter = document.getElementById('property-type-filter')?.value || '';
+            const priceFilter = document.getElementById('price-filter')?.value || '';
+            const bedroomsFilter = document.getElementById('bedrooms-filter')?.value || '';
+            const locationFilter = document.getElementById('location-filter')?.value || '';
+
+            // Apply search filter
+            if (searchTerm) {
+                filtered = filtered.filter(property => 
+                    property.title.toLowerCase().includes(searchTerm) ||
+                    property.location.toLowerCase().includes(searchTerm) ||
+                    property.type.toLowerCase().includes(searchTerm)
+                );
+            }
+
+            // Apply type filter
+            if (typeFilter) {
+                filtered = filtered.filter(property => property.type === typeFilter);
+            }
+
+            // Apply price filter
+            if (priceFilter) {
+                if (priceFilter.includes('-')) {
+                    const [min, max] = priceFilter.split('-').map(Number);
+                    filtered = filtered.filter(property => property.price >= min && property.price <= max);
+                } else if (priceFilter.includes('+')) {
+                    const min = parseFloat(priceFilter.replace('+', ''));
+                    filtered = filtered.filter(property => property.price >= min);
+                }
+            }
+
+            // Apply bedrooms filter
+            if (bedroomsFilter) {
+                const minBedrooms = parseInt(bedroomsFilter);
+                filtered = filtered.filter(property => property.bedrooms >= minBedrooms);
+            }
+
+            // Apply location filter
+            if (locationFilter) {
+                filtered = filtered.filter(property => 
+                    property.location.toLowerCase().includes(locationFilter.toLowerCase())
+                );
+            }
+
+            currentProperties = filtered;
+            currentPage = 1;
+            renderProperties(currentProperties);
+            renderPagination(currentProperties.length);
+        }
+
+        function openPropertyModal(property) {
+            const modal = document.getElementById('property-modal');
+            const content = document.getElementById('property-modal-content');
+            
+            content.innerHTML = `
+                <div class="property-modal-content">
+                    <div class="property-modal-gallery">
+                        <img src="https://picsum.photos/800/600?random=${property.id}" alt="${property.title}">
+                    </div>
+                    <div class="property-modal-details">
+                        <h3>${property.title}</h3>
+                        <p class="property-price">$${property.price.toLocaleString()}</p>
+                        <div class="property-specs">
+                            <span><i class="fas fa-bed"></i> ${property.bedrooms} beds</span>
+                            <span><i class="fas fa-bath"></i> ${property.bathrooms} baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> ${property.sqft} sqft</span>
+                        </div>
+                        <p class="property-location">
+                            <i class="fas fa-map-marker-alt"></i> ${property.location}
+                        </p>
+                        <div class="property-description">
+                            <h4>Description</h4>
+                            <p>${property.description}</p>
+                        </div>
+                        <div class="property-actions">
+                            <button class="btn btn-primary" onclick="openScheduleModal(${JSON.stringify(property).replace(/"/g, '&quot;')})">
+                                Schedule Tour
+                            </button>
+                            <button class="btn btn-outline" onclick="toggleWishlist(${JSON.stringify(property).replace(/"/g, '&quot;')})">
+                                <i class="fas fa-heart"></i> Add to Wishlist
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            modal.classList.add('active');
+        }
+
+        function openScheduleModal(property) {
+            const modal = document.getElementById('schedule-modal');
+            modal.classList.add('active');
+            
+            // Store property info for form submission
+            modal.dataset.propertyId = property.id;
+            modal.dataset.propertyTitle = property.title;
+        }
+
+        function toggleWishlist(property) {
+            const wishlist = new Wishlist();
+            wishlist.toggle(property);
+            updateCartAndWishlistCounts();
+            
+            const isInWishlist = wishlist.has(property.id);
+            showToast(
+                isInWishlist ? 'Property added to wishlist' : 'Property removed from wishlist',
+                'success'
+            );
+        }
+
+        function setupMobileMenu() {
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const menuClose = document.querySelector('.mobile-menu-close');
+            const menuOverlay = document.querySelector('.mobile-menu-overlay');
+            const mobileMenu = document.querySelector('.mobile-menu');
+
+            [menuToggle, menuClose, menuOverlay].forEach(element => {
+                if (element) {
+                    element.addEventListener('click', () => {
+                        document.body.classList.toggle('mobile-menu-open');
+                    });
+                }
+            });
+        }
+
+        function updateCartAndWishlistCounts() {
+            const cart = new Cart();
+            const wishlist = new Wishlist();
+            
+            const cartCount = document.getElementById('cart-count');
+            const wishlistCount = document.getElementById('wishlist-count');
+            
+            if (cartCount) cartCount.textContent = cart.getCount();
+            if (wishlistCount) wishlistCount.textContent = wishlist.getCount();
+        }
+
+        // Modal functionality
+        document.addEventListener('click', function(e) {
+            if (e.target.matches('.modal-backdrop') || e.target.matches('.modal-close')) {
+                const modal = e.target.closest('.modal');
+                if (modal) {
+                    modal.classList.remove('active');
+                }
+            }
+        });
+
+        // Schedule form submission
+        document.getElementById('schedule-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const modal = document.getElementById('schedule-modal');
+            const propertyTitle = modal.dataset.propertyTitle;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                modal.classList.remove('active');
+                showToast(`Tour scheduled for ${propertyTitle}!`, 'success');
+                this.reset();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

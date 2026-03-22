@@ -29,7 +29,7 @@
     </div>
 
     <!-- Top Bar -->
-    <div class="top-bar">
+    <!-- <div class="top-bar">
         <div class="container">
             <div class="top-bar-left">
                 <span><i class="fas fa-phone"></i> <a href="tel:+18102885412">(810) 288-5412</a></span>
@@ -44,70 +44,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <!-- Header -->
-    <header class="header">
-        <div class="header-container">
-            <div class="logo">
-                <h1>James Williamson LLC</h1>
-            </div>
-            
-            <nav class="nav" role="navigation">
-                <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="properties.html" class="nav-link">Properties</a></li>
-                    <li><a href="decor.html" class="nav-link">Decor Shop</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="team.html" class="nav-link">Team</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="blog.html" class="nav-link">Blog</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-
-            <div class="header-actions">
-                <button class="action-btn search-btn" aria-label="Search">
-                    <i class="fas fa-search"></i>
-                </button>
-                <button class="action-btn wishlist-btn" aria-label="Wishlist">
-                    <i class="fas fa-heart"></i>
-                    <span class="badge" id="wishlist-count">0</span>
-                </button>
-                <button class="action-btn cart-btn" aria-label="Shopping cart">
-                    <i class="fas fa-shopping-bag"></i>
-                    <span class="badge" id="cart-count">0</span>
-                </button>
-                <button class="action-btn account-btn" aria-label="Account">
-                    <i class="fas fa-user"></i>
-                </button>
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay"></div>
-    <nav class="mobile-menu">
-        <div class="mobile-menu-header">
-            <h2>Menu</h2>
-            <button class="mobile-menu-close">&times;</button>
-        </div>
-        <ul class="mobile-menu-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="properties.html">Properties</a></li>
-            <li><a href="decor.html">Decor Shop</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <div id="header-placeholder"></div>
 
     <!-- Main Content -->
     <main class="main-content">
@@ -283,6 +222,7 @@
     </main>
 
     <!-- Footer -->
+    <div id="header-placeholder"></div>
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-content">
@@ -388,14 +328,14 @@
     <div id="toast-container" class="toast-container"></div>
 
     <!-- Scripts -->
-    <script src="js/data.js"></script>
-    <script src="js/utils.js"></script>
-    <script src="js/components.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/utils.js"></script>
+        <script src="js/components.js"></script>
+        <script src="js/header.js"></script>
     <script>
         // Homepage functionality
         document.addEventListener('DOMContentLoaded', async function() {
             await loadFeaturedContent();
-            setupMobileMenu();
             updateCartAndWishlistCounts();
             setupHeaderActions();
         });
@@ -444,21 +384,6 @@
             } catch (error) {
                 console.error('Error loading featured content:', error);
             }
-        }
-
-        function setupMobileMenu() {
-            const menuToggle = document.querySelector('.mobile-menu-toggle');
-            const menuClose = document.querySelector('.mobile-menu-close');
-            const menuOverlay = document.querySelector('.mobile-menu-overlay');
-            const mobileMenu = document.querySelector('.mobile-menu');
-
-            [menuToggle, menuClose, menuOverlay].forEach(element => {
-                if (element) {
-                    element.addEventListener('click', () => {
-                        document.body.classList.toggle('mobile-menu-open');
-                    });
-                }
-            });
         }
 
         function setupHeaderActions() {

@@ -271,7 +271,7 @@ p {
 /* ===== HEADER STYLES ===== */
 .header {
   position: fixed;
-  top: 42px; /* Account for top-bar height */
+  top: 0;
   left: 0;
   right: 0;
   background: var(--color-white);
@@ -381,19 +381,19 @@ p {
 
 .mobile-menu-toggle {
   display: none;
-  flex-direction: column;
-  width: 30px;
-  height: 20px;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  font-size: 1.375rem;
+  padding: 0;
+  border-radius: var(--radius-sm);
 }
 
-.mobile-menu-toggle span {
-  display: block;
-  height: 3px;
-  background: var(--color-primary);
-  border-radius: var(--radius-sm);
-  transition: all var(--transition-base);
-}
 .mobile-menu-overlay {
   position: fixed;
   top: 0;
@@ -497,8 +497,8 @@ p {
 
 /* ===== MAIN CONTENT ===== */
 .main-content {
-  margin-top: 122px; /* Header height (80px) + Top bar height (42px) */
-  min-height: calc(100vh - 122px);
+  margin-top: 80px;
+  min-height: calc(100vh - 80px);
 }
 
 /* Page Transition */
@@ -1384,23 +1384,7 @@ p {
   margin-bottom: var(--space-12);
 }
 
-/* Mobile Menu Styles */
-.mobile-menu-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 3px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: var(--space-2);
-}
-
-.mobile-menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background: var(--color-neutral-700);
-  transition: all var(--transition-fast);
-}
+/* Mobile Menu Styles — toggle visibility handled in responsive.css */
 
 .mobile-menu-overlay {
   position: fixed;
@@ -1422,7 +1406,7 @@ p {
   width: 300px;
   height: 100%;
   background: var(--color-white);
-  transition: transform var(--transition-base);
+  transition: right var(--transition-base);
   z-index: 9999;
   box-shadow: var(--shadow-lg);
 }
@@ -1465,16 +1449,7 @@ p {
   background: var(--color-neutral-50);
 }
 
-.body.mobile-menu-open .mobile-menu-overlay,
-body.mobile-menu-open .mobile-menu-overlay {
-  opacity: 1;
-  visibility: visible;
-}
 
-.body.mobile-menu-open .mobile-menu,
-body.mobile-menu-open .mobile-menu {
-  transform: translateX(-300px);
-}
 
 /* Pagination Container */
 .pagination-container {
@@ -1492,7 +1467,7 @@ body.mobile-menu-open .mobile-menu {
   .mobile-menu-toggle {
     display: flex;
   }
-  
+
   .header-container {
     padding: var(--space-4);
   }

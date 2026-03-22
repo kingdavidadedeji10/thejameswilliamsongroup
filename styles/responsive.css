@@ -69,9 +69,10 @@
   .btn {
     padding: var(--space-2) var(--space-4);
     font-size: var(--text-sm);
-    min-height: 40px;
   }
-  
+  .mobile-menu-toggle {
+    display: flex !important;
+  }
   .btn-lg {
     padding: var(--space-3) var(--space-5);
     font-size: var(--text-base);
@@ -493,6 +494,7 @@
   .team-card.team-card-horizontal .team-card-image img {
     min-height: 300px;
     height: 300px !important;
+    object-position: top;
   }
   
   .team-card.team-card-horizontal .team-card-content {

@@ -140,6 +140,10 @@ function createTeamCard(member) {
               <a href="mailto:${member.email}">${member.email}</a>
             </div>
             <div class="contact-info-item">
+              <i class="fas fa-phone"></i>
+              <a href="tel:${(member.phone||'').replace(/\s+/g, '')}">${member.phone||''}</a>
+            </div>
+            <div class="contact-info-item">
               <i class="fas fa-map-marker-alt"></i>
               <span>3122 Nw 27th St, Gainesville, FL 32605</span>
             </div>
